@@ -1,14 +1,18 @@
 # YouTube Data Analysis
 
+
 ## Overview
-This project performs an **exploratory data analysis (EDA)** of YouTube trending videos in the US.  
-Using Python and popular libraries such as Pandas, NumPy, Matplotlib, and Seaborn, we clean, preprocess, and visualize the dataset to extract meaningful insights about video performance, trends, and user engagement.
+This project cleans and processes a Kaggle dataset to then perform an **exploratory data analysis (EDA)** of some popular YouTube videos in the United States.  
+Using Python and popular libraries such as Pandas, NumPy, Matplotlib, and Seaborn, we clean, preprocess, and visualise the dataset to extract meaningful information about video performance, trends, and user engagement.
+
+In addition to this, we also develop a machine learning model to predict YouTube video likes based on the previously cleaned dataset using Scikit-Learn in Python.
 
 The analysis includes:
-- Average and total views per category
+- Analysis of views metrics
 - Likes, dislikes, and comment ratios
 - Trends over time
 - Correlation between key metrics
+- Metrics related to categories
 
 ---
 
@@ -66,9 +70,38 @@ Run the 02_eda.ipynb notebook to explore:
 
 Visualizations include:
 - Horizontal bar plots
+
+![Horizontal bar plot example](images/t10_categories_like_ratio.png)
+
 - Histograms
+
+![Horizontal bar plot example](images/view_distribution.png)
+
 - Correlation heatmaps
+
+![Horizontal bar plot example](images/correlation_metrics.png)
+
 - Pie charts
+
+![Horizontal bar plot example](images/views_by_time_publication.png)
+
+- Scatter plots
+
+![Horizontal bar plot example](images/likeratio_v_views_scatter.png)
+
+- Line plots
+
+![Horizontal bar plot example](images/engagement_ratios_v_views.png)
+
+
+### Basic Machine Learning
+
+Run the 03_basic_machine_learning.ipynb notebook or src/ml_likes_prediction.py to:
+- Load cleaned dataset
+- Create features so that the model can be trained with relevant data
+- Trains with that features a Random Forest regressor to predict video likes
+- Comparing real values with the predictions to evaluate the model
+- Save the model in a joblib file
 
 ## License
 
